@@ -10,9 +10,9 @@ function Header() {
         <ul>
         {/* <ThemeToggle /> */}
           <li><Link to="/">Home</Link></li>
-          <li><Link to="/restaurants">Restaurants</Link></li>
-          <li><Link to="/foods">Foods</Link></li>
-          <li><Link to="/users">Users</Link></li>
+          <li><Link to="/restaurants">Restaurantes</Link></li>
+          <li><Link to="/foods">Comidas</Link></li>
+          <li><Link to="/users">Usuários</Link></li>
         </ul>
       </nav>
     </header>

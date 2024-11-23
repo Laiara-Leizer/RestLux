@@ -1,7 +1,12 @@
-.food-details {
+/* .food-details {
   padding: 2rem;
-  background-color: #f5e6d3;
-  min-height: calc(100vh - 120px);
+
+} */
+
+.food-details {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .food-details h1 {
@@ -32,4 +37,14 @@
   font-size: 1.2rem;
   color: #4a3728;
 }
+
+img {
+  width: 15vw;
+  margin-right: 2.7vw;
+  border: double;
+  display: flex;
+  justify-self: center;
+  padding: 1vw;
+}
+
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './UserDetailsPage.css';
+import Loading from '../../components/Loading';
 
 function UserDetailsPage() {
   const [user, setUser] = useState(null);
@@ -14,7 +15,7 @@ function UserDetailsPage() {
   }, [id]);
 
   if (!user) {
-    return <div className="loading">Carregando...</div>;
+    return <Loading />;
   }
 
   return (

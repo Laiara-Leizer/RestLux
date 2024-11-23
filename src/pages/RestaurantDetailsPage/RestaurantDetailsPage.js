@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './RestaurantDetailsPage.css';
+import Loading from '../../components/Loading';
 
 function RestaurantDetailsPage() {
   const [restaurant, setRestaurant] = useState(null);
@@ -14,7 +15,7 @@ function RestaurantDetailsPage() {
   }, [id]);
 
   if (!restaurant) {
-    return <div className="loading">Carregando...</div>;
+    return <Loading />;
   }
 
   return (

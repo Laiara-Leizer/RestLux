@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './UsersPage.css';
+import Loading from '../../components/Loading';
 
 function UsersPage() {
   const [users, setUsers] = useState([]);
@@ -11,6 +12,12 @@ function UsersPage() {
       .then(data => setUsers(data))
       .catch(error => console.error('Error fetching users:', error));
   }, []);
+
+
+  if (!users) {
+    return <Loading />;
+  }
+
 
   return (
     <div className="users-page">

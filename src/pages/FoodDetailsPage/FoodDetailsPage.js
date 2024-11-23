@@ -1,53 +1,51 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './FoodDetailsPage.css';
+import Loading from '../../components/Loading';
+
+
+// Importando o componente Loading
 
 function FoodDetailsPage() {
   const [food, setFood] = useState(null);
-  const [darkMode, setDarkMode] = useState(false);
   const { id } = useParams();
 
   useEffect(() => {
     // Fetch data
     fetch(`https://apifakedelivery.vercel.app/foods/${id}`)
-      .then(response => response.json())
-      .then(data => {
-        setFood(data);
-        
-
-      })
-      .catch(error => console.error('Error:', error));
+      .then((response) => response.json())
+      .then((data) => setFood(data))
+      .catch((error) => console.error('Error:', error));
+      
   }, [id]);
 
+  // Exibe o componente Loading enquanto os dados não foram carregados
   if (!food) {
-    return <div className="loading">
-      <div className="loading-spinner"></div>
-      <p>Loading delicious details...</p>
-    </div>;
+    return <Loading />;
   }
 
-  const formatTime = (time) => {
-    return time || 'Estimated time unavailable';
-  };
+  const formatTime = (time) => time || 'Estimated time unavailable';
 
-  const formatPrice = (price) => {
-    return new Intl.NumberFormat('pt-BR', {
+  const formatPrice = (price) =>
+    new Intl.NumberFormat('pt-BR', {
       style: 'currency',
-      currency: 'BRL'
+      currency: 'BRL',
     }).format(price);
-  };
 
   return (
     <div className="container">
-
       <div className="food-details">
         <div className="food-image-container">
           <img src={food.image} alt={food.name} className="food-image" />
         </div>
 
+
+
+
+
         <div className="food-info">
           <h1>{food.name}</h1>
-          
+
           <div className="price-rating-container">
             <p className="price">Preço: {formatPrice(food.price)}</p>
             <p className="rating">Avaliação: {food.rating} ⭐</p>
@@ -67,9 +65,7 @@ function FoodDetailsPage() {
             <p>ID do restaurante: {food.restaurantId}</p>
           </div>
 
-          <button className="order-button">
-            Pedir agora!
-          </button>
+          <button className="order-button">Pedir agora!</button>
         </div>
       </div>
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './RestaurantsPage.css';
+import Loading from '../../components/Loading';
 
 function RestaurantsPage() {
   const [restaurants, setRestaurants] = useState([]);
@@ -17,6 +18,14 @@ function RestaurantsPage() {
     restaurant.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  if (!restaurants) {
+    return <Loading />;
+  }
+
+
+
+
+  
   return (
     <div className="restaurants-page">
       <h1>Restaurantes disponíveis</h1>
@@ -27,14 +36,15 @@ function RestaurantsPage() {
         onChange={(e) => setSearchTerm(e.target.value)}
         className="search-input"
       />
+
+
+
       <ul className="restaurant-list">
         {filteredRestaurants.map(restaurant => (
           <li key={restaurant.id} className="restaurant-item">
             <Link to={`/restaurants/${restaurant.id}`}>
 
-            <img
-              src={restaurant.image}
-              alt={`${restaurant.name} image`}
+            <img src={restaurant.image} alt={`${restaurant.name} image`}
               className="restaurant-logo"
               onError={(e) => {
                 e.target.onerror = null;
@@ -47,6 +57,10 @@ function RestaurantsPage() {
           </li>
         ))}
       </ul>
+
+
+
+      
     </div>
   );
 }
