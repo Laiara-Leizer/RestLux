@@ -15,7 +15,7 @@ function UserDetailsPage() {
   }, [id]);
 
   if (!user) {
-    return <Loading />;
+    return <div>Loading...</div>; // Mostra um fallback enquanto os dados não carregam
   }
 
   return (

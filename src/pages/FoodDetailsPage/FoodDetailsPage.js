@@ -21,7 +21,7 @@ function FoodDetailsPage() {
 
   // Exibe o componente Loading enquanto os dados não foram carregados
   if (!food) {
-    return <Loading />;
+    return <div>Loading...</div>; // Mostra um fallback enquanto os dados não carregam
   }
 
   const formatTime = (time) => time || 'Estimated time unavailable';
