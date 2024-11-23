@@ -48,3 +48,14 @@ img {
   padding: 1vw;
 }
 
+
+.footer_food {
+  background-color: #4a3728;
+  color: #e6d5b8;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 21.99vh;
+}

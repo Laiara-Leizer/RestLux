@@ -14,7 +14,7 @@ body {
 
 main {
   flex: 1;
-  padding-bottom: 60px; /* To account for the fixed footer */
+  padding-bottom: 10px; /* To account for the fixed footer */
 }
 
 button {

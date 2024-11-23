@@ -69,9 +69,7 @@ function FoodDetailsPage() {
         </div>
       </div>
 
-      {/* <footer className="footer">
-        <p>&copy; {new Date().getFullYear()} Food Delivery Service. All rights reserved.</p>
-      </footer> */}
+
     </div>
   );
 }
