@@ -36,6 +36,10 @@ function FoodDetailsPage() {
     <div className="container">
       <div className="food-details">
         <div className="food-image-container">
+
+
+
+          
           <img src={food.image} alt={food.name} className="food-image" />
         </div>
 
@@ -51,6 +55,11 @@ function FoodDetailsPage() {
             <p className="rating">Avaliação: {food.rating} ⭐</p>
           </div>
 
+          <div className="restaurant-info">
+            <p>ID do restaurante: {food.restaurantId}</p>
+          </div>
+
+
           <div className="delivery-info">
             <p>Tempo médio de preparação: {formatTime(food.time)}</p>
             <p>Valor para entrega: {formatPrice(food.delivery)}</p>
@@ -61,9 +70,6 @@ function FoodDetailsPage() {
             <p>{food.description}</p>
           </div>
 
-          <div className="restaurant-info">
-            <p>ID do restaurante: {food.restaurantId}</p>
-          </div>
 
           <button className="order-button">Pedir agora!</button>
         </div>
