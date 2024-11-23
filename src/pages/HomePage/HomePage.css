@@ -1,0 +1,15 @@
+.home-page {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f5e6d3;
+  min-height: calc(100vh - 120px);
+}
+
+.home-page h1 {
+  color: #4a3728;
+}
+
+.home-page p {
+  color: #6b5b4f;
+}
+

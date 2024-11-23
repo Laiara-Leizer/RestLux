@@ -1,0 +1,101 @@
+/* Light Theme */
+body {
+    transition: all 0.3s ease;
+  }
+  
+  body.light-theme {
+    background-color: #FFE4E1;  /* Misty Rose */
+    color: #4B0082;  /* Indigo */
+  }
+  
+  body.light-theme .header {
+    background-color: #98FB98;  /* Pale Green */
+    color: #800000;  /* Maroon */
+  }
+  
+  body.light-theme .content {
+    background-color: #E6E6FA;  /* Lavender */
+    color: #006400;  /* Dark Green */
+  }
+  
+  body.light-theme .footer {
+    background-color: #DDA0DD;  /* Plum */
+    color: #000080;  /* Navy */
+  }
+  
+  /* Dark Theme */
+  body.dark-theme {
+    background-color: #1A1A1A;  /* Dark Gray */
+    color: #00FF00;  /* Lime */
+  }
+  
+  body.dark-theme .header {
+    background-color: #4A0404;  /* Dark Red */
+    color: #FFD700;  /* Gold */
+  }
+  
+  body.dark-theme .content {
+    background-color: #2F4F4F;  /* Dark Slate Gray */
+    color: #FF69B4;  /* Hot Pink */
+  }
+  
+  body.dark-theme .footer {
+    background-color: #483D8B;  /* Dark Slate Blue */
+    color: #FFA500;  /* Orange */
+  }
+  
+  /* Theme Toggle Button */
+  .theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .theme-toggle img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+  }
+  
+  /* Light Mode Button */
+  body.light-theme .theme-toggle {
+    background-color: #FFB6C1;  /* Light Pink */
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+  
+  /* Dark Mode Button */
+  body.dark-theme .theme-toggle {
+    background-color: #483D8B;  /* Dark Slate Blue */
+    box-shadow: 0 0 10px rgba(255,255,255,0.2);
+  }
+  
+  /* Header Styling */
+  .header {
+    background-color: #4a3728;
+    padding: 1rem;
+  }
+  
+  .header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+  }
+  
+  .header nav ul li a {
+    color: #e6d5b8;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .header nav ul li a:hover {
+    color: #8fbc8f;
+  }
+  

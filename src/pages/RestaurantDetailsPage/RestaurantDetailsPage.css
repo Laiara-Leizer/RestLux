@@ -1,0 +1,29 @@
+.restaurant-details {
+  padding: 2rem;
+  background-color: #f5e6d3;
+  min-height: calc(100vh - 120px);
+}
+
+.restaurant-details h1 {
+  color: #4a3728;
+  margin-bottom: 1rem;
+}
+
+.restaurant-details p {
+  color: #6b5b4f;
+  margin-bottom: 0.5rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #4a3728;
+}
+
+img{
+  width: 10vw;
+  margin-right: 2.7vw;
+}
+
+

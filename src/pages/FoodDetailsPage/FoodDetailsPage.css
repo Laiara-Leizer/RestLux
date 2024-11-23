@@ -1,0 +1,35 @@
+.food-details {
+  padding: 2rem;
+  background-color: #f5e6d3;
+  min-height: calc(100vh - 120px);
+}
+
+.food-details h1 {
+  color: #4a3728;
+  margin-bottom: 1rem;
+}
+
+.food-details .description {
+  color: #6b5b4f;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.food-details .price {
+  color: #8fbc8f;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.food-details p {
+  color: #6b5b4f;
+  margin-bottom: 0.5rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #4a3728;
+}
+
