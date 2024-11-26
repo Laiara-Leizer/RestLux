@@ -14,74 +14,48 @@ function RestaurantsPage() {
       .catch(error => console.error('Error fetching restaurants:', error));
   }, []);
 
+  // Filtrar por nome ou ID
   const filteredRestaurants = restaurants.filter(restaurant =>
-    restaurant.name.toLowerCase().includes(searchTerm.toLowerCase())
+    restaurant.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    restaurant.id.toString().includes(searchTerm) // Buscar por ID
   );
 
   if (!restaurants) {
     return <Loading />;
   }
 
-
-
-
-  
   return (
     <div className="restaurants-page">
       <h1>Restaurantes disponíveis</h1>
       <input
         type="text"
-        placeholder="Search restaurants..."
+        placeholder="Procure restaurantes pelo nome ou ID..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         className="search-input"
       />
 
-
-
       <ul className="restaurant-list">
         {filteredRestaurants.map(restaurant => (
           <li key={restaurant.id} className="restaurant-item">
             <Link to={`/restaurants/${restaurant.id}`}>
-
-            <img src={restaurant.image} alt={`${restaurant.name} image`}
-              className="restaurant-logo"
-              onError={(e) => {
-                e.target.onerror = null;
-                e.target.src = `https://via.placeholder.com/150x150?text=${restaurant.name}`;
-              }}
-            />
+              <img
+                src={restaurant.image}
+                alt={`${restaurant.name} image`}
+                className="restaurant-logo"
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = `https://via.placeholder.com/150x150?text=${restaurant.name}`;
+                }}
+              />
               <h2>{restaurant.name}</h2>
+              {/* <p>ID: {restaurant.id}</p> */}
             </Link>
-
           </li>
         ))}
       </ul>
-
-
-
-      
     </div>
   );
 }
 
 export default RestaurantsPage;
-
-/*
-
-
-{"id":"6",
-"name":"Burguer King",
-"rating":"3.5",
-"image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-mwH8D7nmaq8OOj_A5qI4qh4LnXhuJtN5vQ&s",
-"description":"Rede de fast food conhecida por seus hambúrgueres saborosos."}]
-
-
-id
-name
-rating
-image
-description
-
-
-*/
