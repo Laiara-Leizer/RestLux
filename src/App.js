@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+
 import HomePage from './pages/HomePage/HomePage';
 import UsersPage from './pages/UsersPage/UsersPage';
 import UserDetailsPage from './pages/UserDetailsPage/UserDetailsPage';
@@ -10,7 +11,8 @@ import RestaurantDetailsPage from './pages/RestaurantDetailsPage/RestaurantDetai
 
 
 import FoodsPage from './pages/FoodsPage/FoodsPage';
-// import ThemeToggle from './components/ThemeToggle';
+// import ThemeChange from './components/ThemeToggle/ThemeToggle';
+
 
 import FoodDetailsPage from './pages/FoodDetailsPage/FoodDetailsPage';
 // import './App.css';
@@ -24,6 +26,9 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             
+            {/* <Route path="/" element={<ThemeChange />} /> */}
+
+
             <Route path="/users" element={<UsersPage />} />
             <Route path="/users/:id" element={<UserDetailsPage />} />
             <Route path="/restaurants" element={<RestaurantsPage />} />

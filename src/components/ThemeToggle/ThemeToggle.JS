@@ -1,14 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import HomePage from '../pages/HomePage/HomePage';
-import UsersPage from '../pages/UsersPage/UsersPage';
-import UserDetailsPage from '../pages/UserDetailsPage/UserDetailsPage';
-import RestaurantsPage from '../pages/RestaurantsPage/RestaurantsPage';
-import RestaurantDetailsPage from '../pages/RestaurantDetailsPage/RestaurantDetailsPage';
-import FoodsPage from '../pages/FoodsPage/FoodsPage';
-import FoodDetailsPage from '../pages/FoodDetailsPage/FoodDetailsPage';
+import HomePage from '../../pages/HomePage/HomePage';
+import UsersPage from '../../pages/UsersPage/UsersPage';
+import UserDetailsPage from '../../pages/UserDetailsPage/UserDetailsPage';
+import RestaurantsPage from '../../pages/RestaurantsPage/RestaurantsPage';
+import RestaurantDetailsPage from '../../pages/RestaurantDetailsPage/RestaurantDetailsPage';
+import FoodsPage from '../../pages/FoodsPage/FoodsPage';
+import FoodDetailsPage from '../../pages/FoodDetailsPage/FoodDetailsPage';
 import moonIcon from './img/moon.svg';
 import sunIcon from './img/brightness-high.svg';
+
+
+
+
+
+
 
 import './ThemeToggle.css';
 
@@ -63,7 +69,7 @@ function ThemeToggle() {
             {/* Renderizar conteúdo baseado no tema */}
             {darkMode ? (
                 <div style={{ padding: '20px', textAlign: 'center', fontSize: '24px', fontWeight: 'bold' }}>
-                    Posicione as rotas do tema escuro aqui
+                    <div>Posicione as rotas do tema escuro aqui</div>
                 </div>
             ) : (
                 <Routes>
