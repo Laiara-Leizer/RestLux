@@ -21,8 +21,10 @@
 }
 
 
-.Logo{
-  width: 12vw;
+.Logo {
   margin: 0;
   padding: 0;
+  display: flex;
+  width: 12vw;
+  place-self: center;
 }
